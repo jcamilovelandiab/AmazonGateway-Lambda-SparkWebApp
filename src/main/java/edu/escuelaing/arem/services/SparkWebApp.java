@@ -16,25 +16,30 @@ public class SparkWebApp {
     }
 
     private static String inputDataPage(Request req, Response res) {
+        String pageContent = "<!DOCTYPE html>"
+        + "<html>"
+        + "<body>";
         if(req.queryParams("value")!=null){
             Integer number=Integer.parseInt(req.queryParams("value"));
-            return "The square of the given number is: "+ MathServices.square(number) ;
+            pageContent = pageContent
+            + "<form action=\"/Beta\">"
+            +"<p>The square of the given number is: "+ MathServices.square(number) +"</p>"
+            +"<button>Go back</button>"
+            + "</form>";
         }else{
-            String pageContent
-                = "<!DOCTYPE html>"
-                + "<html>"
-                + "<body>"
+            pageContent = pageContent
+                
                 + "<h2>Square</h2>"
                 + "<form action=\"/Beta\">"
                 + "  Please. Insert the number:<br>"
                 + "  <input type=\"text\" name=\"value\" value=\"\">"
                 + "  <br><br>"
                 + "  <input type=\"submit\" value=\"Submit\">"
-                + "</form>"
-                + "</body>"
-                + "</html>";
-            return pageContent;
+                + "</form>";
         }
+        pageContent = pageContent + "</body>"
+                + "</html>";
+        return pageContent;
     }
     
     /**
