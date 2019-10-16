@@ -20,7 +20,7 @@ mvn exec:java -Dexec.mainClass="edu.escuelaing.arem.services.SparkWebApp"
 
 To open the website locally go to
 ```
-http://localhost:4567/inputdata
+http://localhost:4567/Beta
 ```
 
 Execute this line to see the java documentation.
