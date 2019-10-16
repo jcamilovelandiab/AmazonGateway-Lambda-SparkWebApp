@@ -28,7 +28,6 @@ public class SparkWebApp {
             + "</form>";
         }else{
             pageContent = pageContent
-                
                 + "<h2>Square</h2>"
                 + "<form action=\"/Beta\">"
                 + "  Please. Insert the number:<br>"
