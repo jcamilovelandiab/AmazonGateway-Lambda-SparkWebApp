@@ -25,7 +25,6 @@ public class MathServices {
             url = new URL("https://h6g62t7sy6.execute-api.us-east-1.amazonaws.com/Beta?value=" + String.valueOf(i));
             URLConnection conexion = url.openConnection();
             conexion.connect();
-            
             // Lectura
             InputStream is = conexion.getInputStream();
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
